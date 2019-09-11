@@ -5,7 +5,7 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.join(__dirname, 'lib', 'bundle'),
-    filename: 'html-print.min.js',
+    filename: 'simple-print.min.js',
   },
   optimization: {
     splitChunks: {

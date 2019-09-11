@@ -18,16 +18,7 @@ class SimplePrint {
         specs = !!specs.length ? specs.join(',') : ''
         const win = window.open('', name, specs, replace)
 
-        win.document.write(`
-            <html>
-            <head>
-                <title>${document.title}</title>
-            </head>
-            <body>
-                ${element.innerHTML}
-            </body>
-            </html>
-        `)
+        win.document.write(`<html><head><title>${document.title}</title></head><body>${element.innerHTML}</body></html>`)
 
         for (const style of styles) {
             const link = win.document.createElement('link')
