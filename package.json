@@ -32,11 +32,11 @@
   },
   "homepage": "https://sutanlab.js.org/simple-print",
   "devDependencies": {
-    "@babel/cli": "7.5.5",
-    "@babel/core": "7.5.5",
-    "@babel/preset-env": "7.5.5",
+    "@babel/cli": "7.6.0",
+    "@babel/core": "7.6.0",
+    "@babel/preset-env": "7.6.0",
     "webpack": "4.39.3",
-    "webpack-cli": "3.3.7"
+    "webpack-cli": "3.3.8"
   },
   "dependencies": {}
 }
