@@ -1,0 +1,15 @@
+const path = require('path')
+
+module.exports = {
+  entry: ['./src/index.js'],
+  mode: 'production',
+  output: {
+    path: path.join(__dirname, 'lib', 'bundle'),
+    filename: 'html-print.min.js',
+  },
+  optimization: {
+    splitChunks: {
+      chunks:'all'
+    }
+  }
+}
