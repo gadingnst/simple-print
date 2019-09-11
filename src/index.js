@@ -20,13 +20,13 @@ class SimplePrint {
 
         win.document.write(`<html><head><title>${document.title}</title></head><body>${element.innerHTML}</body></html>`)
 
-        for (const style of styles) {
+        styles.forEach(style => {
             const link = win.document.createElement('link')
             link.setAttribute('rel', 'stylesheet')
             link.setAttribute('type', 'text/css')
             link.setAttribute('href', style)
             win.document.getElementsByTagName('head')[0].appendChild(link)
-        }
+        })
 
         setTimeout(() => {
             win.document.close()

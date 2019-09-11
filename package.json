@@ -1,7 +1,7 @@
 {
   "name": "simple-print",
   "version": "1.0.5",
-  "description": "Lightweight utility to print html element easier.",
+  "description": "Simple Javascript utility to print html element easier.",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib; webpack",
@@ -20,9 +20,11 @@
     "url": "git+https://github.com/sutanlab/simple-print.git"
   },
   "keywords": [
+    "printd",
     "print",
     "html print",
     "printjs",
+    "document print",
     "element print"
   ],
   "author": "Sutan Nst. <sutan.gnst@gmail.com>",

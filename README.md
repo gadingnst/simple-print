@@ -2,7 +2,7 @@
 
 [![GitHub](https://img.shields.io/github/license/sutanlab/simple-print)](https://github.com/sutanlab/simple-print) [![Build Status](https://travis-ci.org/sutanlab/simple-print.svg?branch=master)](https://travis-ci.org/sutanlab/simple-print) [![npm](https://img.shields.io/npm/dt/simple-print.svg)](https://www.npmjs.com/package/simple-print) [![npm](https://img.shields.io/bundlephobia/min/simple-print.svg)](https://unpkg.com/simple-print/lib/bundle/simple-print.min.js) [![GitHub issues](https://img.shields.io/github/issues/sutanlab/simple-print.svg)](https://github.com/sutanlab/simple-print/issues)
 
-> Lightweight utility to print html element easier.
+> Simple Javascript utility to print html element easier.
 
 ## Getting started
 
