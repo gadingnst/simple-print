@@ -42,9 +42,9 @@ SimplePrint.render(document.getElementById('element-to-print'))
 
 ### With more options and callback
 ```js
-const element = document.getElementById('element-to-print') 
+var element = document.getElementById('element-to-print') 
 
-const opts = {
+var opts = {
     name: '_blank',
     specs: [
         'fullscreen=yes',
