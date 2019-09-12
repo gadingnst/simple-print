@@ -23,24 +23,30 @@ import SimplePrint from 'simple-print'
 ### 2. All in minified js
 
 ```html
+<!-- PRODUCTION BUILD -->
 <script src="https://unpkg.com/simple-print/lib/bundle/simple-print.min.js"></script>
+
+<!-- OR -->
+
+<!-- DEVELOPMENT BUILD -->
+<script src="https://unpkg.com/simple-print/lib/bundle/simple-print-dev.js"></script>
 ```
 
 ## How to Use
 
 ### Simple use 
 ```js
-SimplePrint.options = {
+var print = new SimplePrint({
     styles: [
         'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
         'assets/css/your.css'
     ]
-}
+})
 
-SimplePrint.render(document.getElementById('element-to-print'))
+print.render(document.getElementById('element-to-print'))
 ```
 
-### With more options and callback
+### With advanced options and callback
 ```js
 var element = document.getElementById('element-to-print') 
 
@@ -56,9 +62,16 @@ var opts = {
     ]
 }
 
-SimplePrint.options = opts
+var print = new SimplePrint(opts)
 
-SimplePrint.render(element, function() {
+// you can assign your options like this
+print.options = {
+    styles: [
+        'your-path/other-style.css'
+    ]
+}
+
+print.render(element, function() {
     console.log('Printing completed or was cancelled!')
 })
 ```

@@ -1,26 +1,29 @@
 class SimplePrint {
 
-    static set options(options) {
-        this.opts = options
+    constructor(options = {}) {
+        this.name = options.name || '_blank'
+        this.specs = options.specs || ['fullscreen=yes', 'titlebar=yes', 'scrollbars=yes']
+        this.replace = options.replace || true
+        this.styles = options.styles || []
     }
 
-    static render(element, cb = () => true) {
+    set options(options = {}) {
+        this.name = options.name || this.name
+        this.specs = options.specs || this.specs
+        this.replace = options.replace || this.replace
+        this.styles = options.styles || this.styles
+    }
+
+    render(element, cb = () => true) {
         if (!element)
             return window.alert('Element to print not found!')
 
-        let {
-            name = '_blank',
-            specs = ['fullscreen=yes', 'titlebar=yes', 'scrollbars=yes'],
-            replace = true,
-            styles = []
-        } = this.opts
-
-        specs = !!specs.length ? specs.join(',') : ''
-        const win = window.open('', name, specs, replace)
+        this.specs = !!this.specs.length ? this.specs.join(',') : ''
+        const win = window.open('', this.name, this.specs, this.replace)
 
         win.document.write(`<html><head><title>${document.title}</title></head><body>${element.innerHTML}</body></html>`)
 
-        styles.forEach(style => {
+        this.styles.forEach(style => {
             const link = win.document.createElement('link')
             link.setAttribute('rel', 'stylesheet')
             link.setAttribute('type', 'text/css')
@@ -40,4 +43,4 @@ class SimplePrint {
 
 global.SimplePrint = SimplePrint
 
-export default SimplePrint
+module.exports = SimplePrint
