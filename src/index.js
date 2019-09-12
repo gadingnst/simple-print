@@ -1,17 +1,17 @@
 class SimplePrint {
 
-    constructor(options = {}) {
-        this.name = options.name || '_blank'
-        this.specs = options.specs || ['fullscreen=yes', 'titlebar=yes', 'scrollbars=yes']
-        this.replace = !!options.replace || true
-        this.styles = options.styles || []
+    constructor({ name = '_blank', specs = ['fullscreen=yes', 'titlebar=yes', 'scrollbars=yes'], replace = true, styles = [] } = {}) {
+        this.name = name
+        this.specs = specs
+        this.replace = replace
+        this.styles = styles
     }
 
-    set options(options = {}) {
-        this.name = options.name || this.name
-        this.specs = options.specs || this.specs
-        this.replace = typeof options.replace  === 'undefined' || options.replace === null ? this.replace : !!options.replace
-        this.styles = options.styles || this.styles
+    set options({ name = this.name, specs = this.specs, replace = this.replace, styles = this.styles } = {}) {
+        this.name = name
+        this.specs = specs
+        this.replace = replace
+        this.styles = styles
     }
 
     render(element, cb = () => true) {
