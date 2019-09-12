@@ -10,7 +10,7 @@ class SimplePrint {
     set options(options = {}) {
         this.name = options.name || this.name
         this.specs = options.specs || this.specs
-        this.replace = typeof options.replace  === 'undefined' || options.replace === null ? this.replace : options.replace
+        this.replace = replaceType  === 'undefined' || options.replace === null ? this.replace : options.replace
         this.styles = options.styles || this.styles
     }
 
