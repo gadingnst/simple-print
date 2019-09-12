@@ -1,6 +1,6 @@
 {
   "name": "simple-print",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Simple Javascript utility to print html element easier.",
   "main": "lib/index.js",
   "scripts": {
