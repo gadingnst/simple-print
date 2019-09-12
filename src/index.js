@@ -3,7 +3,7 @@ class SimplePrint {
     constructor(options = {}) {
         this.name = options.name || '_blank'
         this.specs = options.specs || ['fullscreen=yes', 'titlebar=yes', 'scrollbars=yes']
-        this.replace = options.replace || true
+        this.replace = !!options.replace || true
         this.styles = options.styles || []
     }
 
