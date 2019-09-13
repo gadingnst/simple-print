@@ -18,7 +18,9 @@ class SimplePrint {
         if (!element)
             return window.alert('Element to print not found!')
 
-        this.specs = !!this.specs.length ? this.specs.join(',') : ''
+        if (Array.isArray(this.specs))
+            this.specs = !!this.specs.length ? this.specs.join(',') : ''
+
         const win = window.open('', this.name, this.specs, this.replace)
 
         win.document.write(`<html><head><title>${document.title}</title></head><body>${element.innerHTML}</body></html>`)

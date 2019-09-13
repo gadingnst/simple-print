@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'build') {
   outputFile = pkg.name + '.min.js';
 } else {
   mode = 'development';
-  outputFile = pkg.name + '-dev.js';
+  outputFile = pkg.name + '.dev.js';
 }
 
 module.exports = {
