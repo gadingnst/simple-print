@@ -46,7 +46,7 @@ var print = new SimplePrint({
 })
 
 function btnClick() {
-	print.render(document.getElementById('element-to-print'))
+    print.render(document.getElementById('element-to-print'))
 }
 ```
 
