@@ -6,6 +6,8 @@
 
 ## Getting started
 
+##### See [Demo Here](https://jsfiddle.net/sutanlab/d72ke1sL)
+
 ### 1. Use Package with NPM or YARN with ES6 import
 
 ```bash
@@ -20,7 +22,7 @@ $ yarn add simple-print
 import SimplePrint from 'simple-print'
 ```
 
-### 2. All in minified js
+### 2. With CDN
 
 ```html
 <!-- PRODUCTION BUILD -->
@@ -43,7 +45,9 @@ var print = new SimplePrint({
     ]
 })
 
-print.render(document.getElementById('element-to-print'))
+function btnClick() {
+	print.render(document.getElementById('element-to-print'))
+}
 ```
 
 ### With advanced options and callback
@@ -64,16 +68,18 @@ var opts = {
 
 var print = new SimplePrint(opts)
 
-// you can assign your options like this
-print.options = {
-    styles: [
-        'your-path/other-style.css'
-    ]
-}
+function btnClick() {
+	// you can assign your new options like this
+    print.options = {
+        styles: [
+            'your-path/other-style.css'
+        ]
+    }
 
-print.render(element, function() {
-    console.log('Printing completed or was cancelled!')
-})
+    print.render(element, function() {
+        console.log('Printing completed or was cancelled!')
+    })
+}
 ```
 
 ---
