@@ -31,7 +31,7 @@ import SimplePrint from 'simple-print'
 <!-- OR -->
 
 <!-- DEVELOPMENT BUILD -->
-<script src="https://unpkg.com/simple-print/lib/bundle/simple-print-dev.js"></script>
+<script src="https://unpkg.com/simple-print/lib/bundle/simple-print.dev.js"></script>
 ```
 
 ## How to Use
