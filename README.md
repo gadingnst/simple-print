@@ -69,7 +69,7 @@ var opts = {
 var print = new SimplePrint(opts)
 
 function btnClick() {
-	// you can assign your new options like this
+    // you can assign your new options like this
     print.options = {
         styles: [
             'your-path/other-style.css'
