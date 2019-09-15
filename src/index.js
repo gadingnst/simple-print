@@ -15,8 +15,8 @@ class SimplePrint {
     }
 
     render(element, cb = () => true) {
-        if (!element)
-            return window.alert('Element to print not found!')
+        if (!(element instanceof Element || element instanceof HTMLDocument))
+            return window.alert(`Element to print can't be found!`)
 
         if (Array.isArray(this.specs))
             this.specs = !!this.specs.length ? this.specs.join(',') : ''
