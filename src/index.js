@@ -1,6 +1,6 @@
 class SimplePrint {
 
-    constructor({ name = '_blank', specs = ['fullscreen=yes', 'titlebar=yes', 'scrollbars=yes'], replace = true, styles = [] } = {}) {
+    constructor({ name = '_blank', specs = ['fullscreen=yes', 'titlebar=yes', 'scrollbars=yes'], replace = true, styles = ['https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'] } = {}) {
         this.name = name
         this.specs = specs
         this.replace = replace
